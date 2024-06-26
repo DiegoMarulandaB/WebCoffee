@@ -46,7 +46,7 @@ const FeaturedProducts = () => {
                     <Card className="py-4 border border-gray-700 dark:border-gray-200 shadow-none bg-[#F6E6CB] dark:bg-[#13161c]">
                       <CardContent className="relative flex items-center justify-center px-6 py-2 aspect-auto object-cover">
                         <img
-                          src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${images.data[0].attributes.url}`}
+                          src={`${images.data[0].attributes.url}`}
                           alt="Image featured"
                           rel="preconnect"
                         />

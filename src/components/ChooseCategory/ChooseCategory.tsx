@@ -23,7 +23,7 @@ const ChooseCategory = () => {
               className="relative max-w-xs mx-auto overflow-hidden bg-no-repeat bg-cover rounded-lg border border-gray-700 dark:border-white shadow-none bg-[#F6E6CB] dark:bg-[#13161c] mt-5 sm:mt-0"
             >
               <img
-                src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${category.attributes.mainImage.data.attributes.url}`}
+                src={`${category.attributes.mainImage.data.attributes.url}`}
                 alt={category.attributes.categoryName}
                 rel="preconnect"
                 className="max-w-[270px] transition-transform duration-150 ease-in-out hover:scale-125 aspect-auto object-cover rounded-lg"
