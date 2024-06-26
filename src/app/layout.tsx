@@ -21,47 +21,45 @@ const montserrat = MontserratFont({
 });
 
 export const metadata: Metadata = {
-  title: "WebCoffee",
-  description:
-    "E-commerce de café como proyecto final para la especialización de frontend en Digital House",
-  keywords:
-    "café, latinoamerica, Brasil, Colombia, Honduras, Perú, E-commerce",
-  metadataBase: new URL("https://diegomarulanda.vercel.app/"),
+  title: 'WebCoffee',
+  description: 'E-commerce de café como proyecto final para la especialización de frontend en Digital House',
+  keywords: 'café, latinoamerica, Brasil, Colombia, Honduras, Perú, E-commerce',
+  metadataBase: new URL('https://web-coffee-ten.vercel.app/'),
   alternates: {
-    canonical: "/",
+    canonical: '/',
     languages: {
-      "es-ES": "/es-ES",
-      "en-US": "/en-US",
+      'es-ES': '/es-ES',
+      'en-US': '/en-US',
     },
   },
   openGraph: {
-    type: "website",
-    url: "https://diegomarulanda.vercel.app/",
-    title: "WebCoffee",
+    type: 'website',
+    url: 'https://web-coffee-ten.vercel.app/',
+    title: 'WebCoffee',
     description:
-      "Descubre la esencia del café en nuestro E-commerce, especializado en ofrecerte los más finos granos de Brasil, Colombia, Honduras y Perú. Sumérgete en una experiencia sensorial única con nuestras selecciones de café.",
+      'Descubre la esencia del café en nuestro E-commerce, especializado en ofrecerte los más finos granos de Brasil, Colombia, Honduras y Perú. Sumérgete en una experiencia sensorial única con nuestras selecciones de café.',
     images: [
       {
-        url: "/opengraph-image.png",
+        url: 'https://web-coffee-ten.vercel.app/opengraph-image.png',
         width: 1200,
         height: 630,
-        alt: "opengraph image from my portfolio",
-        type: "image/png",
+        alt: 'opengraph image from my portfolio',
+        type: 'image/png',
       },
     ],
-    siteName: "diegomarulanda.vercel.app",
+    siteName: 'https://web-coffee-ten.vercel.app/',
   },
   twitter: {
-    card: "summary_large_image",
-    title: "WebCoffee",
+    card: 'summary_large_image',
+    title: 'WebCoffee',
     description:
-      "Descubre la esencia del café en nuestro E-commerce, especializado en ofrecerte los más finos granos de Brasil, Colombia, Honduras y Perú. Sumérgete en una experiencia sensorial única con nuestras selecciones de café.",
+      'Descubre la esencia del café en nuestro E-commerce, especializado en ofrecerte los más finos granos de Brasil, Colombia, Honduras y Perú. Sumérgete en una experiencia sensorial única con nuestras selecciones de café.',
     images: [
       {
-        url: "/twitter-image.png",
+        url: 'https://web-coffee-ten.vercel.app/twitter-image.png',
         width: 1200,
         height: 630,
-        alt: "image to post on twitter from my portfolio",
+        alt: 'image to post on twitter from my portfolio',
       },
     ],
   },
