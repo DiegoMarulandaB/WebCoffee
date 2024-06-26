@@ -30,6 +30,7 @@ const CarouselProduct = (props: CarouselProductProps) => {
               <img
                 src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${image.attributes.url}`}
                 alt="Imagen producto"
+                rel="preconnect"
                 className="rounded-lg"
               />
             </CarouselItem>

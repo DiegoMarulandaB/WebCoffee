@@ -13,7 +13,7 @@ import {
 import SkeletonSchema from "@/components/Skeleton/SkeletonSchema";
 import { ProductType } from "@/types/product";
 import { Card, CardContent } from "@/components/ui/card";
-import { Expand, ShoppingCart } from "lucide-react";
+import { Expand } from "lucide-react";
 import IconButton from "@/components/IconButton/IconButton";
 import { useRouter } from "next/navigation";
 import { useCart } from "@/components/hooks/use-cart";
@@ -41,16 +41,14 @@ const FeaturedProducts = () => {
               const { slug, images, productName, taste, origin } = attributes;
 
               return (
-                <CarouselItem
-                  key={id}
-                  className="md:basis-1/2 lg:basis-1/3 group"
-                >
+                <CarouselItem key={id} className="md:basis-1/2 lg:basis-1/3 group">
                   <div className="p-1">
                     <Card className="py-4 border border-gray-700 dark:border-gray-200 shadow-none bg-[#F6E6CB] dark:bg-[#13161c]">
                       <CardContent className="relative flex items-center justify-center px-6 py-2 aspect-auto object-cover">
                         <img
                           src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${images.data[0].attributes.url}`}
                           alt="Image featured"
+                          rel="preconnect"
                         />
                         <div className="absolute w-full px-6 transition duration-200 opacity-0 group-hover:opacity-100 bottom-5">
                           <div className="flex justify-center gap-x-6">

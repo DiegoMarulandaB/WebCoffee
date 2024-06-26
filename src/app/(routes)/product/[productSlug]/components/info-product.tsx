@@ -44,6 +44,7 @@ const InfoProduct = (props: InfoProductProps) => {
           strokeWidth={1}
           className="transition duration-300 cursor-pointer hover:fill-black"
           onClick={() => addLoveItem(product)}
+          aria-label="Heart Icon"
           size={21}
         />
       </div>

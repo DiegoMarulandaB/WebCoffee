@@ -25,6 +25,7 @@ const ChooseCategory = () => {
               <img
                 src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${category.attributes.mainImage.data.attributes.url}`}
                 alt={category.attributes.categoryName}
+                rel="preconnect"
                 className="max-w-[270px] transition-transform duration-150 ease-in-out hover:scale-125 aspect-auto object-cover rounded-lg"
               />
               <p className="absolute w-full py-24 ml-2 text-lg font-bold text-start text-black dark:text-black  bottom-5 backdrop:blur-lg">

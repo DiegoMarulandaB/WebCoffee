@@ -6,7 +6,6 @@ interface ProductTasteOrigin {
 const ProductTasteOrigin = (props: ProductTasteOrigin) => {
   const { origin, taste } = props;
 
-  //!producto
   return (
     <div className="flex items-center justify-between gap-3 mt-2">
       <p className="px-2 py-1 text-base font-normal text-white bg-black rounded-full dark:bg-white dark:text-black w-fit">

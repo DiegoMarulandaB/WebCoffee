@@ -25,6 +25,7 @@ const ProductCard = (props: ProductCardProps) => {
   return (
     <Link
       href={`/product/${product.attributes.slug}`}
+      rel="preconnect"
       className="relative p-2 transition-all duration-100 rounded-lg hover:shadow-md"
     >
       <div className="absolute flex items-center justify-between gap-3 px-2 z-[1] top-4">
@@ -37,7 +38,7 @@ const ProductCard = (props: ProductCardProps) => {
       </div>
       <Carousel
         opts={{
-          align: "start",
+          align: 'start',
         }}
         className="w-full max-w-sm"
       >
@@ -46,7 +47,8 @@ const ProductCard = (props: ProductCardProps) => {
             <CarouselItem key={image.id} className="group">
               <img
                 src={`${process.env.NEXT_PUBLIC_BACKEND_URL}${image.attributes.url}`}
-                alt="Image"
+                alt="Imagen producto"
+                rel="preconnect"
                 className="rounded-xl"
               />
               <div
@@ -55,16 +57,12 @@ const ProductCard = (props: ProductCardProps) => {
               >
                 <div className="flex justify-center gap-x-6">
                   <IconButton
-                    onClick={() =>
-                      router.push(`/product/${product.attributes.slug}`)
-                    }
+                    onClick={() => router.push(`/product/${product.attributes.slug}`)}
                     icon={<Expand size={21} className="text-gray-600" />}
                   />
                   <IconButton
-                    onClick={() => console.log("product")}
-                    icon={
-                      <FaShoppingCart size={21} className="text-gray-600" />
-                    }
+                    onClick={() => console.log('product')}
+                    icon={<FaShoppingCart size={21} className="text-gray-600" />}
                   />
                 </div>
               </div>
@@ -73,9 +71,7 @@ const ProductCard = (props: ProductCardProps) => {
         </CarouselContent>
       </Carousel>
       <p className="text-2xl text-center">{product.attributes.productName}</p>
-      <p className="font-bold text-center">
-        {formatPrice(product.attributes.price)}
-      </p>
+      <p className="font-bold text-center">{formatPrice(product.attributes.price)}</p>
     </Link>
   );
 };

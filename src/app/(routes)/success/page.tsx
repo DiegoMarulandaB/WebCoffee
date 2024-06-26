@@ -38,7 +38,7 @@ const PageSuccess = () => {
               aria-label="Botón de comprar"
             >
               Volver a la tienda
-              <FaShop className="ml-2" size={21} />
+              <FaShop className="ml-2" size={21} aria-label="Shop Icon" />
             </Button>
           </div>
         </div>

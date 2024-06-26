@@ -36,13 +36,14 @@ const Navbar = () => {
             className="cursor-pointer"
             onClick={() => router.push("/cart")}
             size={21}
+            aria-label="ShoppingCart Icon"
           />
         ) : (
           <div
             className="flex gap-1 cursor-pointer"
             onClick={() => router.push("/cart")}
           >
-            <BaggageClaim strokeWidth={1} className="cursor-pointer" />
+            <BaggageClaim strokeWidth={1} className="cursor-pointer" aria-label="Baggage Icon" />
             <span>{cart.items.length}</span>
           </div>
         )}
@@ -54,6 +55,7 @@ const Navbar = () => {
           }`}
           onClick={() => router.push("/loved-products")}
           size={21}
+          aria-label="Heart Icon"
         />
 
         {/* <User
