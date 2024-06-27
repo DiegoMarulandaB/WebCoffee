@@ -29,14 +29,13 @@
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
   },
   "settings": {
+    "react": {
+      "version": "detect"
+    },
     "import/resolver": {
       "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"],
-        "typescript": {}
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
-      // "webpack": {
-      //   "config": "path/to/your/webpack.config.js"
-      // }
     }
   }
 }
