@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-// import Link from "next/link";
+import Link from "next/link";
 
 import { cn } from "@/lib/utils";
 import {
@@ -49,28 +49,24 @@ const  MenuList = () => {
                       className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                       href="/"
                     >
-                      <div className="mb-2 mt-4 text-lg font-medium">
-                      WebCoffee
-                      </div>
+                      <div className="mb-2 mt-4 text-lg font-medium">WebCoffee</div>
                       <p className="text-sm leading-tight text-muted-foreground">
-                        Descubre la esencia del café en nuestro E-commerce,
-                        especializado en ofrecerte los más finos granos de
-                        Brasil, Colombia, Honduras y Perú. Sumérgete en una
-                        experiencia sensorial única con nuestras selecciones de
-                        café.
+                        Descubre la esencia del café en nuestro E-commerce, especializado en ofrecerte los más finos
+                        granos de Brasil, Colombia, Honduras y Perú. Sumérgete en una experiencia sensorial única con
+                        nuestras selecciones de café.
                       </p>
                     </a>
                   </NavigationMenuLink>
                 </li>
-                <ListItem href="/shopping" title="Tienda">
+                {/* <ListItem href="/shopping" title="Tienda">
                   Toda tu información y el estado de sus pedidos.
-                </ListItem>
+                </ListItem> */}
                 <ListItem href="/offers" title="Ofertas">
                   Un 20% de descuento en tu primera compra.
                 </ListItem>
-                <ListItem href="/" title="Accesorios">
+                {/* <ListItem href="/accesories" title="Accesorios">
                   Lo que necesitas para disfrutar y preparar la taza perfecta.
-                </ListItem>
+                </ListItem> */}
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
@@ -79,24 +75,18 @@ const  MenuList = () => {
             <NavigationMenuContent>
               <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                 {components.map((component) => (
-                  <ListItem
-                    key={component.title}
-                    title={component.title}
-                    href={component.href}
-                  >
+                  <ListItem key={component.title} title={component.title} href={component.href}>
                     {component.description}
                   </ListItem>
                 ))}
               </ul>
             </NavigationMenuContent>
           </NavigationMenuItem>
-          {/* <NavigationMenuItem>
-            <Link href="/accesorios" legacyBehavior passHref>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Accesorios
-              </NavigationMenuLink>
-            </Link>
-          </NavigationMenuItem> */}
+          <NavigationMenuItem>
+            {/* <Link href="/accesories" legacyBehavior passHref>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>Accesorios</NavigationMenuLink>
+            </Link> */}
+          </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
     );

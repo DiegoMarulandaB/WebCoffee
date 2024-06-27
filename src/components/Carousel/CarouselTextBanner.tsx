@@ -51,22 +51,15 @@ const CarouselTextBanner = () => {
           }),
         ]}
       >
+        {/* className="cursor-pointer" */}
         <CarouselContent>
           {dataCarouselTop.map(({ id, title, link, description }) => (
-            <CarouselItem
-              key={id}
-              onClick={() => router.push(link)}
-              className="cursor-pointer"
-            >
+            <CarouselItem key={id} onClick={() => router.push(link)} className="">
               <div>
                 <Card className="shadow-none border-none bg-transparent">
                   <CardContent className="flex flex-col justify-center p-2 items-center text-center">
-                    <p className="sm:text-lg font-bold text-wrap dark:text-secondary">
-                      {title}
-                    </p>
-                    <p className="text-xs font-normal sm:text-sm text-wrap dark:text-secondary">
-                      {description}
-                    </p>
+                    <p className="sm:text-lg font-bold text-wrap dark:text-secondary">{title}</p>
+                    <p className="text-xs font-normal sm:text-sm text-wrap dark:text-secondary">{description}</p>
                   </CardContent>
                 </Card>
               </div>

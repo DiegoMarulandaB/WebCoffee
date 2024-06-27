@@ -9,11 +9,9 @@ const Bannerproduct = () => {
     <>
       <div className=" text-xl font-normal sm:pb-8 block pt-4 text-center">
         <p className="mt-16">Sabores únicos para cada momento.</p>
-        <h4 className="mt-8 text-3xl font-bold">
-          Cada grano, una historia. Cada taza, una aventura.
-        </h4>
+        <h4 className="mt-8 text-3xl font-bold">Cada grano, una historia. Cada taza, una aventura.</h4>
         <div className="mt-5">
-          <Link href="#" className={buttonVariants()}>
+          <Link href="/category/grano" className={buttonVariants()}>
             Comprar
             <Coffee className="ml-2" />
           </Link>

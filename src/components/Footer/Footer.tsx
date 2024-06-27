@@ -5,24 +5,24 @@ import { Separator } from '../ui/separator';
 const dataFooter = [
   {
     id: 1,
-    name: "Sobre nosotros",
-    link: "/#",
+    name: 'Sobre nosotros',
+    link: '/#',
   },
   {
     id: 2,
-    name: "Productos",
-    link: "/#shopping",
+    name: 'Productos',
+    link: '/#shopping',
   },
   // {
   //   id: 3,
   //   name: "Mi cuenta",
   //   link: "#",
   // },
-  // {
-  //   id: 4,
-  //   name: "Politicas de privacidad",
-  //   link: "/#PrivacyPolicy",
-  // },
+  {
+    id: 4,
+    name: 'Politicas de privacidad',
+    link: '/privacypolicy',
+  },
 ];
 const Footer = () => {
 
