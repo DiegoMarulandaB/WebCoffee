@@ -5,6 +5,7 @@ import ChooseCategory from "@/components/ChooseCategory/ChooseCategory";
 import FeaturedProducts from "@/components/Featured/FeaturedProducts";
 
 // import Image from "next/image";
+//
 
 export default function Home() {
   return (
