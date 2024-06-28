@@ -1,10 +1,9 @@
 import Link from 'next/link';
-import React from 'react'
+import React from 'react';
 import { buttonVariants } from '../ui/button';
 import { Coffee } from 'lucide-react';
 
 const Bannerproduct = () => {
-
   return (
     <>
       <div className=" text-xl font-normal sm:pb-8 block pt-4 text-center">
@@ -17,9 +16,9 @@ const Bannerproduct = () => {
           </Link>
         </div>
       </div>
-      <div className="flex justify-center items-center h-[350px] lg:h-[300px] mt-2 bg-[url('/tazas.webp')] bg-center bg-no-repeat aspect-auto object-cover"></div>
+      <div className="flex justify-center items-center h-[350px] lg:h-[300px] mt-2 bg-[url('/tazas.webp')] bg-center bg-no-repeat aspect-auto object-cover ml-2 sm:ml-0 mr-2 sm:mr-0"></div>
     </>
   );
-}
+};
 
-export default Bannerproduct
+export default Bannerproduct;
