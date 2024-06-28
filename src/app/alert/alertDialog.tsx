@@ -28,9 +28,9 @@ export function AlertDialogDemo() {
           <Button
             onClick={handleClick}
             variant="outline"
-            className="max-w-md mx-auto sm:flex sm:justify-center sm:items-center md:justify-start md:items-start text-2xl dark:bg-white dark:text-black mt-4"
+            className="max-w-md mx-auto sm:flex sm:justify-center sm:items-center md:justify-start md:items-start text-xl dark:bg-white dark:text-black mt-4"
           >
-            <span className="text-red-500"> Abrir antes de ingresar por favor</span>
+            <span className="text-red-500"> Abrir por favor</span>
           </Button>
         </AlertDialogTrigger>
       )}
