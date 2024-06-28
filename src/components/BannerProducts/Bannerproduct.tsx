@@ -16,7 +16,7 @@ const Bannerproduct = () => {
           </Link>
         </div>
       </div>
-      <div className="flex justify-center items-center h-[350px] lg:h-[350px] mt-2 mr-8 bg-[url('/tazas.webp')] bg-center bg-no-repeat aspect-auto object-cover"></div>
+      <div className="flex justify-center items-center h-[360px] lg:h-[360px] mt-2 mr-8 bg-[url('/tazas.webp')] bg-center bg-no-repeat aspect-auto object-cover"></div>
     </>
   );
 };
