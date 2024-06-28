@@ -19,6 +19,12 @@ const ItemsMenuMobile = () => {
         <Link href="/category/capsula" className=" no-underline hover:underline underline-offset-8 mt-2 sm:mt-0 block">
           Café en cápsulas
         </Link>
+        <Link href="/offers" className=" no-underline hover:underline underline-offset-8 mt-2 sm:mt-0 block">
+          Ofertas
+        </Link>
+        <Link href="/#" className=" no-underline hover:underline underline-offset-8 mt-2 sm:mt-0 block">
+          Sobre nosotros
+        </Link>
       </PopoverContent>
     </Popover>
   );
