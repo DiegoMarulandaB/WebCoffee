@@ -26,7 +26,7 @@ const ChooseCategory = () => {
                 src={`${category.attributes.mainImage.data.attributes.url}`}
                 alt={category.attributes.categoryName}
                 rel="preconnect"
-                className="max-w-[370px] relative flex items-center justify-center px-6 py-2 aspect-auto object-cover transition-transform duration-150 ease-in-out hover:scale-125  rounded-lg"
+                className="max-w-[290px] transition-transform duration-150 ease-in-out hover:scale-125 aspect-auto object-cover rounded-lg"
               />
               <p className="absolute w-full py-24 ml-2 text-lg font-bold text-start text-black dark:text-black bottom-5 backdrop:blur-lg">
                 {category.attributes.categoryName}
