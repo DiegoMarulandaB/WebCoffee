@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { buttonVariants } from "../ui/button";
+import { Coffee } from "lucide-react";
 
 const BannerDiscount = () => {
   return (
@@ -8,7 +9,7 @@ const BannerDiscount = () => {
       <div className="max-w-md mx-auto mt-5 sm:flex sm:justify-center sm:gap-8">
         <div className="mb-4 sm:mb-0" aria-label="Botón de comprar">
           <Link href="/offers" className={buttonVariants()}>
-            Haz tu compra aqui
+            Haz tu compra aqui <Coffee className="ml-2" />
           </Link>
         </div>
         <div aria-label="Botón de más información">
