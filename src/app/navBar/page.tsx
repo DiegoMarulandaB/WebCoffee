@@ -15,7 +15,7 @@ const Navbar = () => {
   const { lovedItems } = useLovedProducts();
 
   const redirectToRegister = () => {
-    router.push("/register");
+    router.push("/auth/register");
   };
 
   return (
@@ -58,12 +58,12 @@ const Navbar = () => {
           aria-label="Heart Icon"
         />
 
-        {/* <User
+        <User
           strokeWidth={1}
           className="cursor-pointer"
           size={21}
           onClick={redirectToRegister}
-        /> */}
+        />
 
         <ToggleTheme />
       </div>

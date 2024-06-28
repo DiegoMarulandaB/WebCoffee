@@ -56,7 +56,7 @@ const LoginForm = () => {
                     <Input
                       {...field}
                       type="email"
-                      placeholder="carlos@gmail.com"
+                      placeholder="diego@gmail.com"
                     />
                   </FormControl>
                   <FormMessage />

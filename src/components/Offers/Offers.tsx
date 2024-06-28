@@ -21,7 +21,13 @@ const CoffeeOfferComponent: React.FC<{ offer: Offers }> = ({ offer }) => {
   return (
     <div className="max-w-6xl py-4 mx-auto sm:py-16 sm:px-24 mt-4 sm:mt-0">
       <div className="max-w-full mx-auto mt-5 flex flex-col sm:flex-row">
-        <img className="w-full md:w-1/2 sm:w-1/2" src={offer.imageUrl} alt={offer.name} width={200} height={200} />
+        <img
+          className="w-full md:w-1/2 sm:w-1/2 rounded-lg ml-2 sm:pt-0 mr-2 sm:mr-0 relative flex items-center justify-center px-6 py-2 aspect-auto object-cover"
+          src={offer.imageUrl}
+          alt={offer.name}
+          width={200}
+          height={200}
+        />
         <div className="p-4 max-w-md">
           <h3 className="text-lg font-normal mt-4">{offer.name}</h3>
           <Separator className="bg-black dark:bg-white" />

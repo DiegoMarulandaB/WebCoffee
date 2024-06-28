@@ -39,8 +39,8 @@ const RegisterForm = () => {
   const { pending } = useFormStatus();
   return (
     <CardWrapper
-      label="Create an account"
-      title="Register"
+      label="Crea una cuenta"
+      title="Registrarse"
       backButtonHref="/auth/login"
       backButtonLabel="¿Ya tienes una cuenta? Entre aquí."
     >
@@ -54,11 +54,7 @@ const RegisterForm = () => {
                 <FormItem>
                   <FormLabel>Email</FormLabel>
                   <FormControl>
-                    <Input
-                      {...field}
-                      type="email"
-                      placeholder="carlos@gmail.com"
-                    />
+                    <Input {...field} type="email" placeholder="diego@gmail.com" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -71,7 +67,7 @@ const RegisterForm = () => {
                 <FormItem>
                   <FormLabel>Nombre</FormLabel>
                   <FormControl>
-                    <Input {...field} placeholder="Carlos" />
+                    <Input {...field} placeholder="Diego" />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -105,7 +101,7 @@ const RegisterForm = () => {
             />
           </div>
           <Button type="submit" className="w-full" disabled={pending}>
-            {loading ? "Loading..." : "Register"}
+            {loading ? 'Loading...' : 'Register'}
           </Button>
         </form>
       </Form>
