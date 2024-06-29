@@ -44,8 +44,7 @@ export function AlertDialogDemo() {
               este sitio web.
             </p>
             <p className="text-lg font-normal mt-4">
-              2. El carrito de compra y el formulario de registro o de login no esta habilitado, ya que estos están
-              vinculados con la pasarela de pago Stripe, solo funciona con una cuenta creada desde Estados Unidos. 😔
+              2. El carrito de compra y el formulario no esta habilitado, ya que estos están vinculados con la API de la pasarela de pago Stripe, solo funciona con una cuenta creada desde Estados Unidos, ya que este servicio no esta disponible en Latinoamerica. 😔
             </p>
           </AlertDialogDescription>
         </AlertDialogHeader>
