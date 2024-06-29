@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React, { useState } from 'react';
 import {
@@ -45,7 +45,7 @@ export function AlertDialogDemo() {
             </p>
             <p className="text-lg font-normal mt-4">
               2. El carrito de compra y el formulario de registro o de login no esta habilitado, ya que estos están
-              vinculados con la pasarela de pago Stripe, solo funciona en Estados Unidos. 😔
+              vinculados con la pasarela de pago Stripe, solo funciona con una cuenta creada desde Estados Unidos. 😔
             </p>
           </AlertDialogDescription>
         </AlertDialogHeader>
