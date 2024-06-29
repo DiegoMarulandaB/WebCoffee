@@ -27,14 +27,14 @@ export const dataCarouselTop = [
     id: 3,
     title: "Devoluciones y entregas gratuitas",
     description:
-      "entregas gratuitas por la compra de (2) dos productos y devoluciones sin complicaciones en cada pedido de café.",
+      "Entregas gratuitas por la compra de (2) dos productos y devoluciones sin complicaciones en cada pedido de café.",
     link: "#!",
   },
   {
     id: 4,
     title: "Novedades",
     description:
-      "las últimas tendencias en café y transforma cada taza en una experiencia única.",
+      "Las últimas tendencias en café y transforma cada taza en una experiencia única.",
     link: "#!",
   },
 ];
