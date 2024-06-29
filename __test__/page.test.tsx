@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect'; // Esto debe estar presente y ser importado correctamente
+import '@testing-library/jest-dom/extend-expect';
 import Page from '@/app/(routes)/cart/page';
 
 
