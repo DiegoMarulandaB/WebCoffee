@@ -44,7 +44,7 @@ export function AlertDialogDemo() {
               este sitio web.
             </p>
             <p className="text-lg font-normal mt-4">
-              2. El botón de compra y el formulario no estan habilitados, ya que estos están vinculados con la API de
+              2. El botón de comprar y el formulario no estan habilitados, ya que estos están vinculados con la API de
               prueba de la pasarela de pago de Stripe, solo funciona con una cuenta creada desde Estados Unidos, ya que
               este servicio no esta disponible en Latinoamerica. 😔
             </p>
