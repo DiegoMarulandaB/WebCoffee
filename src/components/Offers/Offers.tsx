@@ -1,15 +1,7 @@
 import React from 'react';
 import { Separator } from '@/components/ui/separator';
 import { formatPrice } from '@/lib/formatPrice';
-
-interface Offers {
-  id: number;
-  name: string;
-  description: string;
-  imageUrl: string;
-  price: number;
-  discountPercentage: number;
-}
+import Offers from '@/types/offers';
 
 const CoffeeOfferComponent: React.FC<{ offer: Offers }> = ({ offer }) => {
   if (!offer) {
