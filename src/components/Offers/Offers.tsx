@@ -41,4 +41,3 @@ const CoffeeOfferComponent: React.FC<{ offer: Offers }> = ({ offer }) => {
 };
 
 export default CoffeeOfferComponent;
-

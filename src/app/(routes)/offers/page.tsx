@@ -1,15 +1,6 @@
 import React from 'react';
 import CoffeeOfferComponent from '@/components/Offers/Offers';
-
-interface Offers {
-  id: number;
-  name: string;
-  description: string;
-  imageUrl: string;
-  price: number;
-  discountPercentage: number;
-}
-
+import Offers from '@/types/offers';
 
 const mockOffers: Offers[] = [
   {
@@ -18,7 +9,7 @@ const mockOffers: Offers[] = [
     description:
       'Un café de cuerpo medio con notas de chocolate y nueces. Su sabor es dulce y suave, ideal para una taza balanceada.',
     imageUrl: '/grano.webp',
-    price: 14.00,
+    price: 14.0,
     discountPercentage: 20,
   },
   {
@@ -27,7 +18,7 @@ const mockOffers: Offers[] = [
     description:
       'De la región montañosa, este café tiene un sabor dulce con matices de caramelo y un toque de almendra.',
     imageUrl: '/grano.webp',
-    price: 14.00,
+    price: 14.0,
     discountPercentage: 20,
   },
   {
@@ -36,7 +27,7 @@ const mockOffers: Offers[] = [
     description:
       'Café molido con una acidez brillante y notas cítricas, proporcionando una experiencia fresca y dulce.',
     imageUrl: '/molido.webp',
-    price: 12.00,
+    price: 12.0,
     discountPercentage: 20,
   },
   {
@@ -45,7 +36,7 @@ const mockOffers: Offers[] = [
     description:
       'Un café molido de cuerpo medio con notas a cacao y un toque de frutos secos, con un perfil dulce y rico.',
     imageUrl: '/molido.webp',
-    price: 12.00,
+    price: 12.0,
     discountPercentage: 15,
   },
 ];
@@ -66,7 +57,3 @@ const OffersPage: React.FC = () => {
 };
 
 export default OffersPage;
-
-
-
-

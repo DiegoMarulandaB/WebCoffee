@@ -30,7 +30,7 @@ export function AlertDialogDemo() {
             variant="outline"
             className="flex justify-center items-center mx-auto mt-5 text-xl dark:bg-white dark:text-black"
           >
-            <span className="text-red-500 text-lg font-bold">¡Abrir por favor!</span>
+            <span className="text-red-500 text-lg font-bold">¡Leer por favor!</span>
           </Button>
         </AlertDialogTrigger>
       )}
@@ -44,7 +44,7 @@ export function AlertDialogDemo() {
               este sitio web.
             </p>
             <p className="text-lg font-normal mt-4">
-              2. El carrito de compra y el formulario no estan habilitados, ya que estos están vinculados con la API de
+              2. El botón de compra y el formulario no estan habilitados, ya que estos están vinculados con la API de
               prueba de la pasarela de pago de Stripe, solo funciona con una cuenta creada desde Estados Unidos, ya que
               este servicio no esta disponible en Latinoamerica. 😔
             </p>
