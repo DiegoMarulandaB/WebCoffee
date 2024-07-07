@@ -5,7 +5,6 @@ interface Offers {
   imageUrl: string;
   price: number;
   discountPercentage: number;
-
 }
 
-export default Offers
+export default Offers;
