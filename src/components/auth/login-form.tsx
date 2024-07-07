@@ -18,7 +18,6 @@ import { Button } from "../ui/button";
 import { z } from "zod";
 import { useFormStatus } from "react-dom";
 import { useState } from "react";
-import { PaymentElement } from '@stripe/react-stripe-js';
 
 const LoginForm = () => {
   const [loading, setLoading] = useState(false);
@@ -78,7 +77,6 @@ const LoginForm = () => {
               )}
             />
           </div>
-          <PaymentElement />
           <Button type="submit" className="w-full" disabled={pending}>
             {loading ? "Loading..." : "Login"}
           </Button>
