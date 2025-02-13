@@ -16,6 +16,9 @@
 # production
 /build
 
+#Midlleware
+src/middleware.ts
+
 # misc
 .DS_Store
 *.pem
