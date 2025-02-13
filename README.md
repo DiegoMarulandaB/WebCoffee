@@ -1,6 +1,13 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Portfolio https://diegomarulanda.vercel.app/
+## Backend  https://github.com/DiegoMarulandaB/WebCoffe-Backend
+
+## Description
+
+Final project for the specialization in frontend at Digital House,I present webCoffee, an e-commerce platform dedicated to the sale of premium coffee from Latin America.
+
+Note: For proper operation, both the Backend repository located above and the Frontend repository must be cloned.
 
 ## Getting Started
 
