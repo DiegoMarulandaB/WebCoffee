@@ -12,7 +12,7 @@ export default function Page() {
     const params = useParams()
     const { productSlug } = params;
 
-    const { result }: ResponseType = useGetProductBySlug(productSlug)
+    const { result }: ResponseType = useGetProductBySlug(productSlug as string)
 
     if (result === null) {
         return <SkeletonProduct />
