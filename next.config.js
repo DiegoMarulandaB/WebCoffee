@@ -1,9 +1,3 @@
-// /** @type {import('next').NextConfig} */
-// const nextConfig = {};
-
-// export default nextConfig;
-
-
 /**
  * @type {import('next').NextConfig}
  */
@@ -25,41 +19,50 @@ const ContentSecurityPolicy = `
 const nextConfig = {
   images: {
     unoptimized: true,
-    domains: ['web-coffee-ten.vercel.app'], // Nota: Elimina el prefijo "https://" para que funcione correctamente.
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'web-coffee-ten.vercel.app',
+        port: '',
+        pathname: '/**',
+      },
+    ],
   },
+
   pageExtensions: ['page.tsx', 'page.ts', 'route.tsx', 'route.ts', 'tsx'],
+
   async headers() {
     return [
       {
-        source: '/(.*)', // Aplica las políticas a todas las rutas
+        source: '/(.*)',
         headers: [
           {
             key: 'Strict-Transport-Security',
-            value: 'max-age=63072000; includeSubDomains; preload', // Protección HTTPS estricta
+            value: 'max-age=63072000; includeSubDomains; preload',
           },
           {
             key: 'Content-Security-Policy',
-            value: ContentSecurityPolicy.replace(/\n/g, ''), // Aplica la CSP sin saltos de línea
+            value: ContentSecurityPolicy.replace(/\n/g, ''),
           },
           {
             key: 'Referrer-Policy',
-            value: 'strict-origin-when-cross-origin', // Protección contra fuga de referencias
+            value: 'strict-origin-when-cross-origin',
           },
           {
             key: 'X-Content-Type-Options',
-            value: 'nosniff', // Previene la detección automática del tipo de contenido
+            value: 'nosniff',
           },
           {
             key: 'X-Frame-Options',
-            value: 'DENY', // Evita que el sitio sea incrustado en iframes
+            value: 'DENY',
           },
           {
             key: 'Permissions-Policy',
-            value: 'geolocation=(), camera=(), microphone=(), payment=()', // Restringe permisos de API
+            value: 'geolocation=(), camera=(), microphone=(), payment=()',
           },
           {
             key: 'X-XSS-Protection',
-            value: '1; mode=block', // Protección contra ataques XSS
+            value: '1; mode=block',
           },
         ],
       },
