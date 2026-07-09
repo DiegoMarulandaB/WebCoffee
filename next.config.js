@@ -18,7 +18,7 @@ const ContentSecurityPolicy = `
     'self'
     data:
     blob:
-    https://webcoffe-backend.onrender.com;
+  https://res.cloudinary.com;
 
   font-src
     'self'
@@ -26,7 +26,7 @@ const ContentSecurityPolicy = `
 
   connect-src
     'self'
-    https://webcoffe-backend.onrender.com;
+   https://webcoffe-backend.onrender.com;
 
   frame-src 'self';
 
@@ -90,13 +90,13 @@ const nextConfig = {
   images: {
     unoptimized: true,
 
-    // remotePatterns: [
-    //   {
-    //     protocol: 'https',
-    //     hostname: 'console.cloudinary.com',
-    //     pathname: '/**',
-    //   },
-    // ],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+        pathname: '/**',
+      },
+    ],
   },
 
   pageExtensions: ['page.tsx', 'page.ts', 'route.tsx', 'route.ts', 'tsx'],
