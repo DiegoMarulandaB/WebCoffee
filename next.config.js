@@ -4,16 +4,41 @@
 
 const ContentSecurityPolicy = `
   default-src 'self';
-  script-src 'self' 'unsafe-inline';
-  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-  img-src 'self' data: blob: https: http:;
-  font-src 'self' https://fonts.gstatic.com data:;
-  connect-src 'self' https://webcoffe-backend.onrender.com;
+
+  script-src
+    'self'
+    'unsafe-inline';
+
+  style-src
+    'self'
+    'unsafe-inline'
+    https://fonts.googleapis.com;
+
+  img-src
+    'self'
+    data:
+    blob:
+    https://webcoffe-backend.onrender.com;
+
+  font-src
+    'self'
+    https://fonts.gstatic.com;
+
+  connect-src
+    'self'
+    https://webcoffe-backend.onrender.com;
+
   frame-src 'self';
+
   object-src 'none';
+
   base-uri 'self';
+
   form-action 'self';
+
   frame-ancestors 'none';
+
+  upgrade-insecure-requests;
 `;
 
 const securityHeaders = [
@@ -23,23 +48,35 @@ const securityHeaders = [
   },
   {
     key: 'Content-Security-Policy',
-    value: ContentSecurityPolicy.replace(/\n/g, ' '),
-  },
-  {
-    key: 'X-Frame-Options',
-    value: 'DENY',
-  },
-  {
-    key: 'X-Content-Type-Options',
-    value: 'nosniff',
+    value: ContentSecurityPolicy.replace(/\n/g, ''),
   },
   {
     key: 'Referrer-Policy',
     value: 'strict-origin-when-cross-origin',
   },
   {
+    key: 'X-Content-Type-Options',
+    value: 'nosniff',
+  },
+  {
+    key: 'X-Frame-Options',
+    value: 'DENY',
+  },
+  {
     key: 'Permissions-Policy',
-    value: 'camera=(), microphone=(), geolocation=(), payment=()',
+    value: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()',
+  },
+  {
+    key: 'Cross-Origin-Opener-Policy',
+    value: 'same-origin',
+  },
+  {
+    key: 'Cross-Origin-Resource-Policy',
+    value: 'same-site',
+  },
+  {
+    key: 'Origin-Agent-Cluster',
+    value: '?1',
   },
 ];
 
@@ -52,12 +89,8 @@ const nextConfig = {
 
   images: {
     unoptimized: true,
+
     remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'web-coffee-ten.vercel.app',
-        pathname: '/**',
-      },
       {
         protocol: 'https',
         hostname: 'res.cloudinary.com',
@@ -66,10 +99,12 @@ const nextConfig = {
     ],
   },
 
+  pageExtensions: ['page.tsx', 'page.ts', 'route.tsx', 'route.ts', 'tsx'],
+
   async headers() {
     return [
       {
-        source: '/:path*',
+        source: '/(.*)',
         headers: securityHeaders,
       },
     ];
