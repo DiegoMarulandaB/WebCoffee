@@ -90,13 +90,13 @@ const nextConfig = {
   images: {
     unoptimized: true,
 
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'console.cloudinary.com',
-        pathname: '/**',
-      },
-    ],
+    // remotePatterns: [
+    //   {
+    //     protocol: 'https',
+    //     hostname: 'console.cloudinary.com',
+    //     pathname: '/**',
+    //   },
+    // ],
   },
 
   pageExtensions: ['page.tsx', 'page.ts', 'route.tsx', 'route.ts', 'tsx'],
