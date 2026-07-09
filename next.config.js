@@ -1,68 +1,60 @@
-/**
- * @type {import('next').NextConfig}
- */
-
-const ContentSecurityPolicy = `
-  default-src 'self';
-  script-src 'self' 'unsafe-inline' 'unsafe-eval' https://web-coffee-ten.vercel.app;
-  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-  img-src 'self' data:  https://res.cloudinary.com;
-  font-src 'self' https://fonts.gstatic.com;
-  connect-src 'self'  https://webcoffe-backend.onrender.com;
-  frame-src 'self';
-  object-src 'none';
-  base-uri 'self';
-  form-action 'self';
-  frame-ancestors 'none';
-`;
-
+/** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true,
+
+  poweredByHeader: false,
+
+  compress: true,
+
+  productionBrowserSourceMaps: false,
+
   images: {
-    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 'res.cloudinary.com',
-        port: '',
-        pathname: '/**',
       },
     ],
+
+    formats: ['image/avif', 'image/webp'],
   },
 
-  pageExtensions: ['page.tsx', 'page.ts', 'route.tsx', 'route.ts', 'tsx'],
+  experimental: {
+    optimizePackageImports: [
+      'lucide-react',
+      'date-fns',
+      'lodash-es',
+    ],
+  },
 
   async headers() {
     return [
       {
-        source: '/(.*)',
+        source: '/:path*',
         headers: [
           {
-            key: 'Strict-Transport-Security',
-            value: 'max-age=63072000; includeSubDomains; preload',
-          },
-          {
-            key: 'Content-Security-Policy',
-            value: ContentSecurityPolicy.replace(/\n/g, ''),
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'strict-origin-when-cross-origin',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
+            key: 'X-DNS-Prefetch-Control',
+            value: 'on',
           },
           {
             key: 'X-Frame-Options',
             value: 'DENY',
           },
           {
-            key: 'Permissions-Policy',
-            value: 'geolocation=(), camera=(), microphone=(), payment=()',
+            key: 'X-Content-Type-Options',
+            value: 'nosniff',
           },
           {
-            key: 'X-XSS-Protection',
-            value: '1; mode=block',
+            key: 'Referrer-Policy',
+            value: 'strict-origin-when-cross-origin',
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=(), browsing-topics=()',
+          },
+          {
+            key: 'Cross-Origin-Opener-Policy',
+            value: 'same-origin',
           },
         ],
       },
@@ -70,4 +62,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
