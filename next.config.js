@@ -22,7 +22,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'web-coffee-ten.vercel.app',
+        hostname: 'res.cloudinary.com',
         port: '',
         pathname: '/**',
       },
