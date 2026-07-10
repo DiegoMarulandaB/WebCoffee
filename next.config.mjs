@@ -1,15 +1,13 @@
+/**
+ * @type {import('next').NextConfig}
+ */
 
 const ContentSecurityPolicy = `
   default-src 'self';
-  base-uri 'self';
-  form-action 'self';
-  frame-ancestors 'none';
-  object-src 'none';
 
   script-src
     'self'
-    'unsafe-inline'
-    'unsafe-eval';
+    'unsafe-inline';
 
   style-src
     'self'
@@ -20,40 +18,37 @@ const ContentSecurityPolicy = `
     'self'
     data:
     blob:
-    https:
     https://res.cloudinary.com;
 
   font-src
     'self'
-    data:
     https://fonts.gstatic.com;
 
   connect-src
     'self'
-    https://webcoffe-backend.onrender.com
-    https://api.cloudinary.com
-    https://res.cloudinary.com;
+    https://webcoffe-backend.onrender.com;
 
-  media-src
-    'self'
-    https://res.cloudinary.com;
+  frame-src 'self';
 
-  worker-src
-    'self'
-    blob:;
+  object-src 'none';
 
-  manifest-src 'self';
+  base-uri 'self';
+
+  form-action 'self';
+
+  frame-ancestors 'none';
 
   upgrade-insecure-requests;
-`
-  .replace(/\n/g, ' ')
-  .replace(/\s{2,}/g, ' ')
-  .trim();
+`;
 
 const securityHeaders = [
   {
+    key: 'Strict-Transport-Security',
+    value: 'max-age=63072000; includeSubDomains; preload',
+  },
+  {
     key: 'Content-Security-Policy',
-    value: ContentSecurityPolicy,
+    value: ContentSecurityPolicy.replace(/\n/g, ''),
   },
   {
     key: 'Referrer-Policy',
@@ -65,19 +60,11 @@ const securityHeaders = [
   },
   {
     key: 'X-Frame-Options',
-    value: 'SAMEORIGIN',
+    value: 'DENY',
   },
   {
     key: 'Permissions-Policy',
-    value: 'camera=(), microphone=(), geolocation=(), browsing-topics=()',
-  },
-  {
-    key: 'Strict-Transport-Security',
-    value: 'max-age=31536000; includeSubDomains; preload',
-  },
-  {
-    key: 'Cross-Origin-Embedder-Policy',
-    value: 'unsafe-none',
+    value: 'camera=(), microphone=(), geolocation=(), payment=(), usb=(), browsing-topics=()',
   },
   {
     key: 'Cross-Origin-Opener-Policy',
@@ -85,15 +72,11 @@ const securityHeaders = [
   },
   {
     key: 'Cross-Origin-Resource-Policy',
-    value: 'cross-origin',
+    value: 'same-site',
   },
   {
     key: 'Origin-Agent-Cluster',
     value: '?1',
-  },
-  {
-    key: 'X-DNS-Prefetch-Control',
-    value: 'on',
   },
 ];
 
@@ -104,35 +87,28 @@ const nextConfig = {
 
   compress: true,
 
-  productionBrowserSourceMaps: false,
-
   images: {
+    unoptimized: true,
+
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'res.cloudinary.com',
+        hostname: 'webcoffe-backend.onrender.com',
+        pathname: '/**',
       },
     ],
-
-    formats: ['image/avif', 'image/webp'],
   },
 
-  experimental: {
-    optimizePackageImports: [
-      'lucide-react',
-      'date-fns',
-      'lodash-es',
-    ],
-  },
+  pageExtensions: ['page.tsx', 'page.ts', 'route.tsx', 'route.ts', 'tsx'],
 
   async headers() {
     return [
       {
-        source: '/:path*',
+        source: '/(.*)',
         headers: securityHeaders,
       },
     ];
   },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
